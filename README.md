@@ -6,6 +6,8 @@ It dynamically positions the buttons on screen based on the number of buttons th
 
 ![AMCircleButton.CircleMenu dark mode](https://github.com/andrewmarmion/AMCircleMenu/blob/main/Images/dark.gif?raw=true)
 ![AMCircleButton.CircleMenu light mode](https://github.com/andrewmarmion/AMCircleMenu/blob/main/Images/light.gif?raw=true)
+![AMCircleButton.VerticalCircleMenu light mode](https://github.com/andrewmarmion/AMCircleMenu/blob/main/Images/verticalMenu.gif?raw=true)
+![AMCircleButton.VerticalCircleMenu dark mode](https://github.com/andrewmarmion/AMCircleMenu/blob/main/Images/verticalMenuDark.gif?raw=true)
 
 ## Requirements
 
@@ -33,12 +35,16 @@ Create your the buttons the you want to display
     let centerButton = AMCircleMenu.CenterButton(image: Image(systemName: "headphones"), 
                                                  color: .yellow)
 
-Then in your view create the `CircleMenu`
+For the expanding circle menu use the following:
 
     AMCircleMenu.CircleMenu(centerButton: centerButton, 
                             circleItems: buttons)
 
+For the vertical action menu use the following:
+
+    AMCircleMenu.VerticalMenu(centerButton: centerButton, circleItems: buttons)
+
 ## Notes:
 
-- Currently the maximum number of buttons that you can use is currently 10.
+- For the CircleMenu the maximum number of buttons that you can use is currently 10, the VerticalCircleMenu is limited by the height of the screen.
 - You cannot currently set the size of the buttons or the how far away they move out from the center button.
